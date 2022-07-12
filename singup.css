@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to top, #120237 0%, #143c48 100%);
+}
+
+* {
+    box-sizing: border-box;
+    transition: .5s all;
+    overflow: hidden;
+}
+
+
+.form .box-container {
+    height: 57em;
+    width: 50em;
+    margin: 1em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+   
+    border: 1px solid #999;
+    background-image: linear-gradient(to top, #120237 0%, #143c48 100%);
+}
+
+.form .box-container .box-info .title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.form .box-container .box-info .redes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+     color: #fff;
+}
+
+.form .box-container .box-info .redes .facebook {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid #9999993d;
+    min-width: 10vw;
+}
+
+.form .box-container .box-info .redes .facebook:hover {
+    background: #ada8a8f7;
+    cursor: pointer;
+}
+
+.form .box-container .box-info .redes .facebook i {
+    font-size: 2.4rem;
+    color: blue;
+}
+
+.form .box-container .box-info .redes .facebook h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.form .box-container .box-info .redes .Google {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid #9999993d;
+    min-width: 10vw;
+    grid-column: 3;
+}
+
+.form .box-container .box-info .redes .Google:hover {
+    background: #ada8a8f7;
+    cursor: pointer;
+}
+
+.form .box-container .box-info .redes .Google i {
+    font-size: 2.4rem;
+    color: orange;
+}
+
+.form .box-container .box-info .redes .Google h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.form .box-container .sub-heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form .box-container .sub-heading span {
+    color: #f48719;
+}
+
+.form .box-container .row {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.form .box-container .row .formu {
+    display: grid;
+    gap: 1.5rem;
+    width: 70%;
+}
+
+.form .box-container .row .formu input {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    background: #eee;
+     color: #000;
+}
+
+.form .box-container .row .formu input:hover {
+    border: 1px solid #000;
+}
+
+.form .box-container .row .formu .btn {
+    width: 30%;
+    height: 50px;
+    margin-left: 30%;
+    font-size: 1.2rem;
+}
+
+
+.form .box-container .row .formu p {
+    font-size: 1.2rem;
+}
+
+
+.form .box-container .row .formu p .span {
+    color: #f48719;
+}
+
+.form .box-container .row .formu p a {
+    color: #f48719;
+    text-decoration: none;
+}
+
+.row .formu a {
+    font-size: 2.2rem;
+    color: #fff;
+}

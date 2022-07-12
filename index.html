@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <title>Uni Peliculas</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="contenedor">
+        <h2 class="logotipo">Uni peliculas</h2>
+        <nav>
+          <div class="links">
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="peliculas.html">Películas</a>
+            <a href="series.html">Series</a>
+            <a href="sobrenosotros.html">Nosotros</a>
+            <input type="text" placeholder="Buscar" />
+          </div>
+          <div class="linkOthers">
+            <a onclick="signupUserToggle()">
+              <i class="fa-solid fa-user-large"></i>
+              <h2>Registrarse</h2>
+            </a>
+            <a onclick="loginToggle()">
+              <i class="fas fa-right-to-bracket"></i>
+              <h2>Inicia sesion</h2>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="pelicula-principal">
+        <video src="/img/Video.mp4" autoplay muted loop></video>
+        <div class="contenedor">
+          <h3 class="titulo">Interestellar</h3>
+          <p class="descripcion">
+            Narra las aventuras de un grupo de exploradores que hacen uso de un
+            agujero de gusano recientemente descubierto para superar las
+            limitaciones de los viajes espaciales tripulados y vencer las
+            inmensas distancias que tiene un viaje interestelar.
+          </p>
+          <a href="https://www.youtube.com/watch?v=2LqzF5WauAw
+                ">
+            <button role="button" class="boton">
+              <i class="fas fa-play"></i>Reproducir
+            </button></a>
+
+          <button role="button" class="boton">
+            <i class="fas fa-info-circle"></i>Más información
+          </button>
+        </div>
+      </div>
+
+      <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+          <h3>Próximamente</h3>
+
+          <div class="indicadores"></div>
+        </div>
+
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <div class="contenedor-carousel">
+            <div class="carousel" id="contenedor"></div>
+          </div>
+          <button role="button" id="flecha-derecha" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+          <h3>Estrenandose</h3>
+          <div class="indicadores"></div>
+        </div>
+
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda-secun" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <div class="contenedor-carousel" id="ccs">
+            <div class="carousel" id="contenedorsecundario"></div>
+          </div>
+          <button role="button" id="flecha-derecha-secun" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+          <h3>Mayor Valoración</h3>
+          <div class="indicadores"></div>
+        </div>
+
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda-ter" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <div class="contenedor-carousel" id="cct">
+            <div class="carousel" id="contenedortercero"></div>
+          </div>
+          <button role="button" id="flecha-derecha-ter" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+          <h3>Series</h3>
+          <div class="indicadores"></div>
+        </div>
+
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda-cuar" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+
+          <div class="contenedor-carousel" id="ccc">
+            <div class="carousel" id="contenedorcuarto"></div>
+          </div>
+          <button role="button" id="flecha-derecha-cuar" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="info_Pelicula"></div>
+    </main>
+  </div>
+
+  <div class="form login-form">
+    <div class="form1 nav-menu-horizontal">
+      <div class="close" onclick="loginToggle()">&times;</div>
+      <div class="header">
+        <i class="fa-regular fa-circle-user"></i>
+        <h1>Iniciar sesión</h1>
+      </div>
+      <form class="forms" id="loginForm" method="post">
+        <div>
+          <div class="user-name">
+            <label class="">Nombre de Usuario</label>
+            <input id="txtUser" class="text-box" type="text" required />
+          </div>
+
+          <div class="password">
+            <label>Contraseña</label>
+            <input id="passUser" class="text-box" type="password" required />
+          </div>
+          <div class="click">
+            <input id="typeUser" type="checkbox">
+            <label for="typeUser">Click aqui si eres una empresa.</label>
+          </div>
+          <div class="btn-area-login">
+            <input class="btn" type="submit" style="text-decoration: none" value="Iniciar Sesion" />
+            <li>
+              <div class="btn2">
+                <a>¿Aún no tienes cuenta? mira aquí </a>
+                <ul class="nav-menu-vertical nav-menu-vertical2">
+                  <div>
+                    <li><a href="registro.html">Registrarse</a></li>
+                    <!-- <li><a href="login-company.html">Como Empresa</a></li> -->
+                  </div>
+                </ul>
+              </div>
+            </li>
+          </div>
+          <a href="recuperars.html">¿Olvidastes tu contraseña o tu Usuario?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="form signup-form-user">
+    <div class="form1 nav-menu-horizontal">
+      <div class="close" onclick="signupUserToggle()">&times;</div>
+      <div class="header">
+        <i class="fa-regular fa-circle-user"></i>
+        <h1>Registrarse</h1>
+      </div>
+      <form class="forms" method="post">
+        <div class="input">
+          <div class="user-name">
+            <label class="">Nombre Completo </label>
+            <input class="text-box" type="text" required />
+          </div>
+          <div class="user-name">
+            <label class="">Email</label>
+            <input class="text-box" type="text" required />
+          </div>
+          <div class="password">
+            <label>Contraseña</label>
+            <input class="text-box" type="password" required />
+          </div>
+          <div class="password">
+            <label>Confirmar Contraseña</label>
+            <input class="text-box" type="password" required />
+          </div>
+
+          <div onclick="fntupdateuserRecu()" class="btn-area-signup">
+            <a href="index.html"><input class="btn" style="text-decoration: none" value="Registrarse" /></a>
+            </li>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <script src="conexion.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="ventana.js"></script>
+</body>
+
+</html>

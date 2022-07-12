@@ -1,0 +1,13 @@
+.row .formu .btns{
+  width: 20%;
+  height: 4vh;
+  background: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.row .formu .btns a{
+    text-decoration: none;
+}

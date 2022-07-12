@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.peliculas {
+  margin: 10px;
+}
+
+.contenedor nav {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.poster {
+  width: 300px;
+  height: 450px;
+  margin-inline-start: 30px;
+  margin-block-end: 40px;
+}
+
+.arrow {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mostrarder img {
+  margin-inline: 30px;
+}
+
+.mostrarizq {
+  margin-inline: 30px;
+}

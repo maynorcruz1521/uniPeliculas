@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Uni peliculas</h2>
+            <nav>
+                <div class="links">
+                    <a href="index.html" class="activo">Inicio</a>
+                    <a href="peliculas.html">Películas</a>
+                    <a href="series.html">Series</a>
+                    <input type="text" placeholder="Buscar" />
+                </div>
+                <!-- <div class="linkOthers">
+                        <a onclick="signupUserToggle()">
+                            <i class="fa-solid fa-user-large"></i>
+                            <h2>Registrarse</h2>
+                        </a>
+                        <a onclick="loginToggle()">
+                            <i class="fas fa-right-to-bracket"></i>
+                            <h2>Inicia sesion</h2>
+                        </a>
+                    </div> -->
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1 class="text-center">Registro de usuario</h1>
+        <a href="index.html">Back</a>
+        <form class="frm" id="frmEditar">
+            <div class="profile-info-img">
+            
+                <div class="profile-info-img">
+                    <img id="imgProfile" class="profile-image" src="img/blank-profile.png">
+                    <video id="webcam" class="webcam"></video>
+                    <canvas id="canvas" class="canvas" width="400px" height="300px"></canvas>
+                </div>
+            
+                <div class="btn-area-camera">
+                    <label id="uploadPhoto" class="nav-menu-btnIni btn-file">
+                        <input id="image" type="file">
+                    </label>
+                    <input id="useCamera" onclick="webCam()" class="nav-menu-btnIni btn-file btnCamera" type="button"
+                        value="Usar Cámara">
+            
+                    <input id="takePhoto" onclick="takePhotos()" class="nav-menu-btnIni btn-file btnTakePhoto" type="button"
+                        value="Tomar Foto">
+            
+                    <input id="savePhoto" onclick="savePhoto()" style="display: none;" class="nav-menu-btnIni btn-file btnTakePhoto"
+                        type="button" value="Guardar Foto">
+            
+                    <input id="cancelPhoto" onclick="cancelPhotos()" style="display: none;"
+                        class="nav-menu-btnIni btn-file btnTakePhoto" type="button" value="Cancelar">
+                </div>
+            <div class="input">
+                        <label class="">Nombre Completo </label>
+                        <input class="text-box" type="text" required />
+            </div>
+            <div class="input">
+                <label class="">Email</label>
+                <input class="text-box" type="text" required />
+            </div>
+            <div class="input">
+                <label>Contraseña</label>
+                <input class="text-box" type="password" required />
+            </div>
+            <div class="input">
+            <label>Confirmar Contraseña</label>
+            <input class="text-box" type="password" required />
+            </div>
+            <div class="input">
+            </div>
+            <div class="btns">
+                <div onclick="fntupdateuser() " type="submit" class="btn-info">
+                    <i class="fa-solid fa-pen-to-square">Registrarse</i>
+                </div>
+            </div>
+
+        </form>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="ventana.js"></script>
+    <script src="js/web-camara.js"></script>
+</body>
+
+</html>

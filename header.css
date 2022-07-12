@@ -1,0 +1,51 @@
+header{
+    height: 7vh;
+    background: #000;
+  
+}
+
+header .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+   padding:0 5%;
+}
+
+header .container nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container nav a{
+    color: #fff;
+    transition:all .5s;
+}
+
+header .container nav a:hover{
+    color: #999;
+    border-bottom:1px solid #999;
+}
+
+header .container nav input{
+    color: #fff;
+    background: #000;
+    border: 0;
+    border-bottom: 1px solid #999;
+}
+
+header .container h2{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+header .container a{
+   text-decoration: none;
+}
+
+header .container h2:hover{
+   cursor: pointer;
+}
+

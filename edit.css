@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.container h1,
+a {
+    color: #fff;
+}
+
+.container a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding-top: 2%;
+}
+
+.container a:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #999;
+}
+
+.container .frm {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .frm .input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.container .frm .input input {
+    padding: 2%;
+    width: 100%;
+}
+
+.container .frm .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4%;
+}
+
+
+.container .frm .input label {
+    color: #fff;
+}
+
+.container .frm .btns .btn-info {
+    padding: 2%;
+    border-radius: 10px;
+    border: 1px solid #999;
+    color: #FFF;
+    transition: all .5s;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container .frm .btns .btn-info i {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.container .frm .btns .btn-info:hover {
+    letter-spacing: .2rem;
+    background: #999;
+    transition: all .5s;
+}
+
+.btn-area-camera {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.btn-area-camera label{
+    color: #fff;
+    display: flex;
+    height: 100%;
+   
+}
+
+.btn-area-camera input {
+    padding: 3%;
+    color: #000;
+    height: 100%;
+}

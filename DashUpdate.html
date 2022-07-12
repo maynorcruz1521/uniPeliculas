@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DashUpdate.css">
+    <!--FONTAWESOME ICONS-->
+    <script src="https://kit.fontawesome.com/610c201c1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+    <!-- cdn sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Admin update</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .content-pop {
+            margin: 0% auto;
+            margin-top: 100px;
+            position: relative;
+            padding: 10px;
+            width: 600px;
+            min-height: 500px;
+            background-color:  #222;
+            border: 1px solid black;
+            color: black
+        }
+    </style>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <a class="back" href="index.html">
+                <i class="fa-solid fa-circle-arrow-left"></i></a>
+            <h1>Uni Peliculas</h1>
+        </div>
+        <ul>
+            <li><img src="/img/img/dashboard (2).png" alt="">&nbsp; <span>Dashboard</span> </li>
+            <li><img src="/img//img/help-web-button.png" alt="">&nbsp; <span>Ayuda</span></li>
+            <li><img src="/img/img/settings.png" alt="">&nbsp;<span>Configuraciones</span> </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="/img/img/search.png" alt=""></button>
+                </div>
+
+
+                <!-- MODAL ADD -->
+                <div class="user">
+                    <input type="button" name="srfe" class="btn" id="open" value="Agregar pelicula">
+                    <div class="popup" id="popup" style="display: none;">
+                        <div class="content-pop">
+                            <a href="#" id="close"><img src="img/close.png" alt=""></a>
+                            <div class="pp">
+                                <form action="">
+                                    <div class="input-box">
+                                        <label for="">Titulo pelicula</label>
+                                        <input type="text" placeholder="Nombre Pelicula">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="">Tipo</label>
+                                        <input type="text" placeholder="Tipo">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="">Sipnosis</label>
+                                        <input type="text" placeholder="Sipnosis">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="">Genero</label>
+                                        <input type="text" placeholder="Genero">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="">Trailer</label>
+                                        <input type="text" placeholder="Trailer">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="">Pais</label>
+                                        <input type="text" placeholder="Pais">
+                                    </div>
+                                    <div class="input-box">
+                                        <label for="">Calificacion</label>
+                                        <input type="text" placeholder="Calificacion">
+                                    </div>
+                                       <div class="input-box">
+                                        <label for="">Imagen</label>
+                                        <input type="text" placeholder="Imagen">
+                                    </div>
+                                    <div onclick="fntupdate()" class="btn"><p>ENVIAR</p></div>
+                                    
+                            </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <img src="/img/img/notifications.png" alt="">
+                    <div class="img-case">
+                        <img src="/img/img/user.png" alt="">
+                    </div>
+                </div>
+                <!-- MODAL ADD -->
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#open").on("click", function () {
+                    $("#popup").fadeIn("slow");
+                });
+                $("#close").on("click", function () {
+                    $("#popup").fadeOut("slow");
+                });
+            });
+        </script>
+        <div class="content">
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Peliculas y Series</h2>
+
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <td>Trailer</td>
+                            <th>Genero</th>
+                            <th>Opciones</th>
+                        </tr>
+                        <tr>
+                            <td>Peaky Blinders</td>
+                            <td>Serie</td>
+                            <td>https://www.youtube.com/watch?v=EM12mcTEI88</td>
+                            <td>Drama histórico</td>
+
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Memory</td>
+                            <td>Pelicula</td>
+                            <td>https://www.youtube.com/watch?v=sVpy5gM6HDY</td>
+                            <td>Acción Suspenso</td>
+
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jurassic World</td>
+                            <td>Pelicula</td>
+                            <td>https://www.youtube.com/watch?v=oMzCG2Xa7rY</td>
+                            <td>Acción Aventura</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>The Boys</td>
+                            <td>Serie</td>
+                            <td>https://www.youtube.com/watch?v=tcrNsIaQkb4</td>
+                            <td>Superheroes</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Stranger things</td>
+                            <td>Serie</td>
+                            <td>https://www.youtube.com/watch?v=bV0RAcuG2Ao</td>
+                            <td>Suspenso y ciencia ficción</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garra</td>
+                            <td>Pelicula</td>
+                            <td>https://www.youtube.com/watch?v=CawbuuGONwo</td>
+                            <td>Drama Comedia</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>El padrino</td>
+                            <td>Pelicula</td>
+                            <td>https://www.youtube.com/watch?v=wA6iB3OZDus</td>
+                            <td>Drama Crimen</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lightyear</td>
+                            <td>Pelicula</td>
+                            <td>https://www.youtube.com/watch?v=DmZGrhz4tAY</td>
+                            <td>Animación Ciencia ficción</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Obi-Wan Kenobi</td>
+                            <td>Serie</td>
+                            <td>https://www.youtube.com/watch?v=ZHEDtlCcnrs</td>
+                            <td>Ciencia ficción</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pollonejo y El Hamster De La Oscuridad</td>
+                            <td>Pelicula</td>
+                            <td>https://www.youtube.com/watch?v=xy7nx8fKk7M</td>
+                            <td>Aventura Animación</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Corazón de Fuego</td>
+                            <td>Pelicula</td>
+                            <td>https://www.youtube.com/watch?v=ZhwZR2nxwRY</td>
+                            <td>Animación Comedia</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Minions: El origen de Gru</td>
+                            <td>Peicula</td>
+                            <td>https://www.youtube.com/watch?v=HhIl_XJ-OGA</td>
+                            <td>Familia Animación</td>
+                            <td>
+                                <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+                                <a href="edit.html"><i class="fa-solid fa-file-pen"></i></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- Comienza seccion comentarios -->
+                <div class="content">
+                    <div class="content-2">
+                        <div class="recent-payments">
+                            <div class="title">
+                                <h2>Comentarios generales de series y peliculas</h2>
+
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Nombre de usuario</th>
+                                    <th>Tipo</th>
+                                    <td>Descripcion</td>
+                                    <th>Calificacion</th>
+                                    <th>Opciones</th>
+                                </tr>
+                                <tr>
+                                    <td>Kenneth perez</td>
+                                    <td>Serie</td>
+                                    <td>Pesimo el doblaje, esperaba más es mejor en audio original</td>
+                                    <td>6/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Pepito perez</td>
+                                    <td>Serie</td>
+                                    <td>No me gusto del todo, que asco de serie</td>
+                                    <td>0/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Francisco ibarra</td>
+                                    <td>Serie</td>
+                                    <td>No me gusto del todo</td>
+                                    <td>3/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Oscar Atila</td>
+                                    <td>Serie</td>
+                                    <td>Me encanto y eso que la volvi a ver</td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Edwin Mendoza</td>
+                                    <td>Serie</td>
+                                    <td>La mejor serie jamas creada</td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Oliver Luna</td>
+                                    <td>Serie</td>
+                                    <td>Porque no subieron la serie completa yo queria ver mas </td>
+                                    <td>9/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Raquel Mendoza</td>
+                                    <td>Serie</td>
+                                    <td>Ame el final, pero ya quiero ver la otra temporadad </td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Magaly vega</td>
+                                    <td>Serie</td>
+                                    <td>No me gusto al inicio, pero despues le agarre cariño</td>
+                                    <td>8/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Malikha solanyi</td>
+                                    <td>Serie</td>
+                                    <td>ya quiero que salga la siguiente temporada</td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Irma alvarado</td>
+                                    <td>Serie</td>
+                                    <td>Muy pocos capitulos pusieron en esta temporada, QUIERO MASSS¡¡¡</td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mauro alegria</td>
+                                    <td>Serie</td>
+                                    <td>Muy buena serie</td>
+                                    <td>7/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Juan sandoval</td>
+                                    <td>Pelicula</td>
+                                    <td>La mejor pelicula del mundo mundial</td>
+                                    <td>9/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Pedro perez</td>
+                                    <td>Pelicula</td>
+                                    <td>Muy buena la pelicula</td>
+                                    <td>8/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maynor cruz</td>
+                                    <td>Pelicula</td>
+                                    <td>Pesimo el cast, esperaba mas, no loco la veo otra vez</td>
+                                    <td>2/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Aleska castillo</td>
+                                    <td>Pelicula</td>
+                                    <td>No me gusto del todo, que asco</td>
+                                    <td>1/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Juan blandon</td>
+                                    <td>Pelicula</td>
+                                    <td>
+                                        La mejor pelicula del mundo mundial, omgaaaaa </td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Yonder scott</td>
+                                    <td>Pelicula</td>
+                                    <td>Muy buena la pelicula, es de mis favoritas</td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Antonio cruz</td>
+                                    <td>Pelicula</td>
+                                    <td>Pesimo el cast, esperaba mas, no loco la veo otra vez</td>
+                                    <td>4/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jarot payan</td>
+                                    <td>Pelicula</td>
+                                    <td>
+                                        Esperaba un poco mas de la pelicula</td>
+                                    <td>7/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Itzel payan</td>
+                                    <td>Pelicula</td>
+                                    <td>
+                                        La pelicula supero todas mis espectativas me encanto</td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>julissa scott</td>
+                                    <td>Pelicula</td>
+                                    <td>
+                                        no me gustaron los actores de la pelicula</td>
+                                    <td>2/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Cherlyn cruz</td>
+                                    <td>Pelicula</td>
+                                    <td>
+                                        La pelicula es de la mejores que eh visto</td>
+                                    <td>10/10</td>
+
+                                    <td>
+                                        <i onclick="fntDelPersona()" class="fa-solid fa-trash-can"></i>
+
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="new-products">
+                            <div class="title">
+                                <h2>Peliculas o series Nuevas</h2>
+
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Portada</th>
+                                    <th>Nombre</th>
+                                    <th>opciones</th>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/peaky blinder.jpg" alt=""></td>
+                                    <td>Peaky Blinders</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/memory.jpg" alt=""></td>
+                                    <td>Memory</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/jurasicc world.jpg" alt=""></td>
+                                    <td>Jurassic World</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/theboys.jpg " alt=""></td>
+                                    <td>The Boys</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/strangerThings.jpg " alt=""></td>
+                                    <td>StrangerThings</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/garra.jpg" alt=""></td>
+                                    <td>Garra</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/padrino.jpg" alt=""></td>
+                                    <td>El Padrino</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/buzz.jpg" alt=""></td>
+                                    <td>Lightyear</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/starwars.jpg" alt=""></td>
+                                    <td>Obi-Wan Kenobi</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/Pollonejo.jpg" alt=""></td>
+                                    <td>Pollonejo y El Hamster De La Oscuridad</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/nuevo 1.jpg" alt=""></td>
+                                    <td>El Hombre del Norte</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/nuevo 2.jpg" alt=""></td>
+                                    <td>Un día para morir</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/nuevo 3.jpg" alt=""></td>
+                                    <td>Black Phone</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/nuevo 4.jpg" alt=""></td>
+                                    <td>Todo a la vez en todas partes</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="/img/img/nuevo 5.jpg" alt=""></td>
+                                    <td>Colisión</td>
+                                    <td><img src="/img/img/info.png" alt=""></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="ventana.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+.body {
+    height: 100vh;
+}
+
+.login-form{
+    background: #444;
+}
+
+.form form>div,
+.main-signup form>div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.form form div>a,
+.main-signup form div>a {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.vefify-account {
+    display: flex;
+    justify-content: center;
+}
+
+.form i,
+.main-signup i {
+    font-size: 80px;
+}
+
+.forms div a{
+    color: #fff;
+}
+
+.text-box {
+    border-radius: 10px;
+    height: 40px;
+    color: black;
+    font-size: 20px;
+}
+
+.btn {
+    background-color: #444;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    height: 50px;
+}
+
+.btn2 {
+    position: relative;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.user-name {
+    display: flex;
+    width: 41vw;
+    flex-direction: column;  
+    color: #fff;
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.click{
+    color: #fff;
+}
+
+.btn-area-login {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.btn-area-login input{
+color: #fff;
+}
+
+.btn-area-login li .btn2 ul div a{
+    text-decoration: none;
+}
+
+.nav-menu-vertical2 {
+    width: 100%;
+    left: 0;
+    border-color: black;
+}
+
+.nav-menu-horizontal-recovery {
+    max-width: 500px;
+    margin: auto;
+}
+
+.form .form1 .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.form .form1 .header h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.form .form1 .forms div {
+    color: #fff;
+}
+
+.form .form1 .forms .input .btn-area-login input {
+    color: #fff;
+}
+
+.form .form1 .forms .input .btn-area-login input:hover {
+    cursor: pointer;
+    background: #034c9e;
+}
+
+
+.form .form1 .forms .input .btn-area-login li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.form .form1 .forms .input .btn-area-login li .btn2 .a {
+    text-decoration: none;
+}
+
+.form .form1 .forms .input .forget {
+    text-decoration: none;
+    color: #fff;
+}
+
+.profile-info-img {
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+    align-items: center;
+}
+
+.profile-info-img img {
+    width: 200px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.profile-info-img .canvas {
+    display: none;
+}
+
+
+.profile-image {
+    display: block;
+}
+
+.profile-image.active {
+    display: none;
+}
+
+.profile-image {
+    display: block;
+}
+
+.btnTakePhoto {
+    display: none;
+}
+
+.btnTakePhoto.active {
+    display: flex;
+}
+
+.btnCamera.active {
+    display: none;
+}

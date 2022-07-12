@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="who.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>Uni Peliculas</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="contenedor">
+                <h2 class="logotipo">Uni peliculas</h2>
+                <nav>
+                    <div class="links">
+                        <a href="index.html" class="activo">Inicio</a>
+                        <a href="peliculas.html">Películas</a>
+                        <a href="series.html">Series</a>
+                        <input type="text" placeholder="Buscar" />
+                    </div>
+                    <div class="linkOthers">
+                        <a onclick="signupUserToggle()">
+                            <i class="fa-solid fa-user-large"></i>
+                            <h2>Registrarse</h2>
+                        </a>
+                        <a onclick="loginToggle()">
+                            <i class="fas fa-right-to-bracket"></i>
+                            <h2>Inicia sesion</h2>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <div class="content-info">
+                <article class="article">
+                    <div class="info who">
+                        <h1 class="heading">¿QUIENES SOMOS?</h1>
+                        <p>somos un grupo de estudiantes universitarios, que ideamos esta pagina a base crear un
+                            ambiente
+                            agradable, mediante
+                            cumplir la satisfacccion de los usuarios mediantes peliculas y series que se estrenan y
+                            peliculas o
+                            series pasadas y dar
+                            un buen servicio a los usuarios</p>
+                    </div>
+                    <div class="info mision">
+                        <h1 class="heading">MISION</h1>
+                        <p>
+                            hacer el mejor ambiente al usuario y que siempre se encuentre comodo y tenga una libre
+                            expresion
+                            mediante las series y/o
+                            peliculas
+                        </p>
+                    </div>
+                    <div class="info vision">
+                        <h1 class="heading">VISION</h1>
+                        <p>hacer el mejor ambiente al usuario y que siempre se encuentre comodo y tenga una libre
+                            expresion
+                            mediante las series y/o
+                            peliculas</p>
+                    </div>
+                </article>
+                <div class="map">
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.6373895809074!2d-86.22629628520458!3d12.136944235925544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73fe7867ce5fad%3A0x842c4aeae5cf3cda!2sNational%20University%20of%20Engineering!5e0!3m2!1sen!2sni!4v1654573343723!5m2!1sen!2sni">
+                        </>"
+                        ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form login-form">
+        <div class="form1 nav-menu-horizontal">
+            <div class="close" onclick="loginToggle()">&times;</div>
+            <div class="header">
+                <i class="fa-regular fa-circle-user"></i>
+                <h1>Iniciar sesión</h1>
+            </div>
+            <form class="forms" id="loginForm" method="post">
+                <div>
+                    <div class="user-name">
+                        <label class="">Nombre de Usuario</label>
+                        <input id="txtUser" class="text-box" type="text" required />
+                    </div>
+
+                    <div class="password">
+                        <label>Contraseña</label>
+                        <input id="passUser" class="text-box" type="password" required />
+                    </div>
+                    <div class="click">
+                        <input id="typeUser" type="checkbox">
+                        <label for="typeUser">Click aqui si eres una empresa.</label>
+                    </div>
+                    <div class="btn-area-login">
+                        <input class="btn" type="submit" style="text-decoration: none" value="Iniciar Sesion" />
+                        <li>
+                            <div class="btn2">
+                                <a>¿Aún no tienes cuenta? mira aquí </a>
+                                <ul class="nav-menu-vertical nav-menu-vertical2">
+                                    <div>
+                                        <li><a href="registro.html">Registrarse</a></li>
+                                        <!-- <li><a href="login-company.html">Como Empresa</a></li> -->
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                    <a href="recuperars.html">¿Olvidastes tu contraseña o tu Usuario?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="form signup-form-user">
+        <div class="form1 nav-menu-horizontal">
+            <div class="close" onclick="signupUserToggle()">&times;</div>
+            <div class="header">
+                <i class="fa-regular fa-circle-user"></i>
+                <h1>Registrarse</h1>
+            </div>
+            <form class="forms" method="post">
+                <div class="input">
+                    <div class="user-name">
+                        <label class="">Nombre Completo </label>
+                        <input class="text-box" type="text" required />
+                    </div>
+                    <div class="user-name">
+                        <label class="">Email</label>
+                        <input class="text-box" type="text" required />
+                    </div>
+                    <div class="password">
+                        <label>Contraseña</label>
+                        <input class="text-box" type="password" required />
+                    </div>
+                    <div class="password">
+                        <label>Confirmar Contraseña</label>
+                        <input class="text-box" type="password" required />
+                    </div>
+
+                    <div onclick="fntupdateuserRecu()" class="btn-area-signup">
+                        <a href="index.html"><input class="btn" style="text-decoration: none" value="Registrarse" /></a>
+                        </li>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="conexion.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="ventana.js"></script>
+</body>
+
+</html>

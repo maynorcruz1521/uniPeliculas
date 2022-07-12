@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--FONTAWESOME ICONS-->
+    <script src="https://kit.fontawesome.com/610c201c1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="form">
+        <div class="box-container">
+
+            <div class="box-info">
+                <a class="back" href="index.html">
+                    <i class="fa-solid fa-circle-arrow-left"></i></a>
+                <h1 class="title">Inicia sesion con</h1>
+                <div class="redes">
+                    <div class="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <h3>Facebook</h3>
+                    </div>
+                    <div class="Google">
+                        <i class="fab fa-google"></i>
+                        <h3>Google</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-heading">
+                <p>O tambien <span>puedes</span></p>
+            </div>
+
+            <div class="row">
+                <form class="formu">
+                    <input class="input" type="text" placeholder="Nombre usuario-Correo" id="txtCorreo"
+                     required>
+                    <input type="password" class="input" placeholder="Contraseña" id="txtContra"
+                    required>
+                    <p>¿Olvidaste la contraseña? <a href="recuperar.html"><span class="span">Haz click áca</span></p></a>
+                    <input type="button" class="btn" value="ingresar " id="btnIniciar" >
+                    <p>¿No tienes una cuenta aún? <a href="Registrarse.html">Registrate aca</a></p>
+                </form>
+                <script src="js/loginRegistroPeli.js"></script>
+                <script src="js/logicaInterfazPeli.js"></script>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
